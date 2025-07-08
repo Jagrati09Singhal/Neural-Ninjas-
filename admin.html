@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Admin Dashboard - NextGen Ballot</title>
+    <link rel="stylesheet" href="/styles/styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <header>
+        <nav>
+            <div class="logo">
+                <span class="logo-text">NextGen</span>
+                <span class="logo-accent">Ballot</span>
+            </div>
+            <ul class="nav-links">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="index.html#about">About</a></li>
+                <li><a href="index.html#how-it-works">How it Works</a></li>
+            </ul>
+            <button class="mobile-menu-button" aria-label="Menu">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+        </nav>
+    </header>
+
+    <main>
+        <!-- Login Form -->
+        <section id="adminLogin" class="admin-login-section">
+            <div class="admin-form-container">
+                <h1>🔐 Admin Login</h1>
+                <form id="adminLoginForm" class="admin-form">
+                    <div class="form-group">
+                        <label for="username">Username</label>
+                        <input type="text" id="username" name="username" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="password">Password</label>
+                        <input type="password" id="password" name="password" required>
+                    </div>
+                    <div class="error-message" id="loginError"></div>
+                    <button type="submit" class="primary-button">Login</button>
+                </form>
+            </div>
+        </section>
+
+        <!-- Admin Dashboard -->
+        <section id="adminDashboard" class="admin-dashboard" style="display: none;">
+            <div class="dashboard-header">
+                <h1>👋 Welcome, Admin</h1>
+                <button id="logoutBtn" class="secondary-button">
+                    <span class="icon">🚪</span> Logout
+                </button>
+            </div>
+
+            <div class="dashboard-grid">
+                <!-- Stats Overview -->
+                <div class="dashboard-card stats-card">
+                    <h2>📊 Voting Statistics</h2>
+                    <div class="stats-grid">
+                        <div class="stat-item">
+                            <span class="stat-value" id="totalVotes">0</span>
+                            <span class="stat-label">Total Votes</span>
+                        </div>
+                        <div class="stat-item">
+                            <span class="stat-value" id="uniqueVoters">0</span>
+                            <span class="stat-label">Unique Voters</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Candidate Stats -->
+                <div class="dashboard-card">
+                    <h2>👥 Candidate Statistics</h2>
+                    <div id="candidateStats" class="candidate-stats">
+                        <!-- Candidate stats will be populated dynamically -->
+                    </div>
+                </div>
+
+                <!-- Actions -->
+                <div class="dashboard-card actions-card">
+                    <h2>⚙️ Admin Actions</h2>
+                    <div class="admin-actions">
+                        <button id="resetVotingBtn" class="danger-button">
+                            <span class="icon">🗑️</span> Reset Voting Data
+                        </button>
+                        <div id="resetSuccess" class="success-message" style="display: none;">
+                            ✔️ Voting data has been reset successfully
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Reset Confirmation Modal -->
+    <div id="resetConfirmModal" class="modal" style="display: none;">
+        <div class="modal-content">
+            <h2>⚠️ Confirm Reset</h2>
+            <p>Are you sure you want to reset all voting data? This action cannot be undone.</p>
+            <div class="modal-actions">
+                <button id="confirmResetBtn" class="danger-button">Yes, Reset Data</button>
+                <button id="cancelResetBtn" class="secondary-button">Cancel</button>
+            </div>
+        </div>
+    </div>
+
+    <footer>
+        <div class="footer-content">
+            <div class="footer-section">
+                <h4>NextGen Ballot</h4>
+                <p>Making democracy more accessible</p>
+            </div>
+            <div class="footer-section">
+                <h4>Quick Links</h4>
+                <ul>
+                    <li><a href="index.html#about">About</a></li>
+                    <li><a href="index.html#how-it-works">How it Works</a></li>
+                    <li><a href="#" class="help-link">Help</a></li>
+                </ul>
+            </div>
+            <div class="footer-section">
+                <h4>Contact</h4>
+                <p>support@nextgenballot.com</p>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2024 NextGen Ballot. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script src="scripts/script.js"></script>
+</body>
+</html>
