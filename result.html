@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Results - NextGen Ballot</title>
+    <link rel="stylesheet" href="/styles/styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
+<body>
+    <header>
+        <nav>
+            <div class="logo">
+                <span class="logo-text">NextGen</span>
+                <span class="logo-accent">Ballot</span>
+            </div>
+            <ul class="nav-links">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="index.html#about">About</a></li>
+                <li><a href="index.html#how-it-works">How it Works</a></li>
+                <li><a href="login.html">Login</a></li>
+            </ul>
+            <button class="mobile-menu-button" aria-label="Menu">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+        </nav>
+    </header>
+
+    <main>
+        <section class="results-section">
+            <div class="results-header">
+                <h1>📊 Live Voting Results</h1>
+                <p class="update-time">Last updated: <span id="lastUpdateTime">Loading...</span></p>
+                <p class="next-update">Next update in: <span id="nextUpdateTimer">3</span>s</p>
+            </div>
+
+            <div class="results-container">
+                <!-- No Votes Message -->
+                <div id="noVotesMessage" class="no-votes-message" style="display: none;">
+                    <div class="message-content">
+                        <div class="message-icon">🗳️</div>
+                        <h2>No Votes Yet</h2>
+                        <p>Voting has not started yet. Please check back later.</p>
+                    </div>
+                </div>
+
+                <!-- Results Summary -->
+                <div id="resultsSummary" class="results-summary">
+                    <div class="total-votes">
+                        <span class="vote-count" id="totalVotes">0</span>
+                        <span class="vote-label">Total Votes</span>
+                    </div>
+                    <div class="chart-container">
+                        <canvas id="resultsChart"></canvas>
+                    </div>
+                </div>
+
+                <!-- Detailed Results -->
+                <div class="detailed-results" id="detailedResults">
+                    <!-- Results will be dynamically populated here -->
+                </div>
+            </div>
+        </section>
+
+        <!-- Results Cards Template -->
+        <template id="resultCardTemplate">
+            <div class="result-card">
+                <div class="candidate-info">
+                    <img class="candidate-image" src="" alt="">
+                    <div class="candidate-details">
+                        <h3 class="candidate-name"></h3>
+                        <p class="candidate-party"></p>
+                    </div>
+                </div>
+                <div class="vote-stats">
+                    <div class="vote-bar-container">
+                        <div class="vote-bar">
+                            <div class="vote-progress"></div>
+                        </div>
+                        <div class="vote-numbers">
+                            <span class="vote-count"></span>
+                            <span class="vote-percentage"></span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </template>
+
+        <!-- Live Feed Section -->
+        <section class="live-feed-section">
+            <h2>Recent Voting Activity</h2>
+            <div class="live-feed" id="liveFeed">
+                <!-- Live feed entries will be added here -->
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="footer-content">
+            <div class="footer-section">
+                <h4>NextGen Ballot</h4>
+                <p>Making democracy more accessible</p>
+            </div>
+            <div class="footer-section">
+                <h4>Quick Links</h4>
+                <ul>
+                    <li><a href="index.html#about">About</a></li>
+                    <li><a href="index.html#how-it-works">How it Works</a></li>
+                    <li><a href="#" class="help-link">Help</a></li>
+                </ul>
+            </div>
+            <div class="footer-section">
+                <h4>Contact</h4>
+                <p>support@nextgenballot.com</p>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2024 NextGen Ballot. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script src="scripts/script.js"></script>
+</body>
+</html> 
