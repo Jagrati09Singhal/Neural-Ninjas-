@@ -189,3 +189,240 @@ nav {
     font-size: 2rem;
     margin-bottom: 2rem;
 }
+
+.steps-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    gap: 1.5rem;
+}
+
+.step {
+    background: #fff;
+    padding: 1.5rem;
+    border-radius: 8px;
+    box-shadow: 0 2px 6px rgba(0,0,0,0.05);
+}
+
+.step-number {
+    width: 40px;
+    height: 40px;
+    background: #4da6ff;
+    color: #fff;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    margin-bottom: 0.5rem;
+    font-weight: 600;
+}
+
+/* Footer */
+footer {
+    background: #f0f4f8;
+    padding: 2rem;
+    margin-top: 2rem;
+}
+
+.footer-content {
+    max-width: 1200px;
+    margin: auto;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 1.5rem;
+}
+
+.footer-section h4 {
+    margin-bottom: 0.5rem;
+    color: #333;
+}
+
+.footer-section ul {
+    list-style: none;
+    padding: 0;
+}
+
+.footer-section ul li {
+    margin-bottom: 0.25rem;
+}
+
+.footer-section a {
+    color: #4da6ff;
+    text-decoration: none;
+}
+
+.footer-bottom {
+    text-align: center;
+    margin-top: 1rem;
+    font-size: 0.875rem;
+    color: #777;
+}
+
+/* Mobile Menu Button */
+.mobile-menu-button {
+    display: none;
+    flex-direction: column;
+    gap: 4px;
+    background: none;
+    border: none;
+    cursor: pointer;
+}
+
+.mobile-menu-button span {
+    display: block;
+    width: 25px;
+    height: 3px;
+    background: #333;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+    .nav-links {
+        display: none;
+    }
+
+    .mobile-menu-button {
+        display: flex;
+    }
+
+    .hero {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .hero-buttons {
+        justify-content: center;
+    }
+}
+
+
+
+
+
+
+
+
+
+
+/* Login Container */
+.login-container {
+    max-width: 500px;
+    background: #fff;
+    padding: 2rem;
+    margin: 3rem auto;
+    border-radius: 10px;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.05);
+    text-align: center;
+}
+
+.login-container h1 {
+    font-size: 2rem;
+    margin-bottom: 0.5rem;
+    color: #333;
+}
+
+.form-description {
+    color: #555;
+    margin-bottom: 1.5rem;
+}
+
+.login-form {
+    text-align: left;
+}
+
+.form-group {
+    margin-bottom: 1.25rem;
+}
+
+.form-group label {
+    display: block;
+    font-weight: 500;
+    margin-bottom: 0.25rem;
+}
+
+.form-group input {
+    width: 100%;
+    padding: 0.6rem;
+    border: 1px solid #ccc;
+    border-radius: 6px;
+    font-size: 1rem;
+    transition: border-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+.form-group input:focus {
+    border-color: #4da6ff;
+    box-shadow: 0 0 0 2px rgba(77,166,255,0.2);
+    outline: none;
+}
+
+.error-message {
+    color: #e63946;
+    font-size: 0.85rem;
+    margin-top: 0.2rem;
+}
+
+/* CAPTCHA */
+.captcha-container .captcha-box {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    background: #f1f5f9;
+    padding: 0.5rem 0.75rem;
+    border-radius: 6px;
+    font-weight: 600;
+    letter-spacing: 2px;
+}
+
+.captcha-box button {
+    background: #4da6ff;
+    color: #fff;
+    border: none;
+    padding: 0.3rem 0.6rem;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background 0.3s ease;
+}
+
+.captcha-box button:hover {
+    background: #3399ff;
+}
+
+/* OTP */
+.otp-container {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+.otp-container input {
+    flex: 1;
+}
+
+.otp-timer {
+    font-size: 0.85rem;
+    color: #555;
+}
+
+/* Form Actions */
+.form-actions {
+    display: flex;
+    gap: 1rem;
+    flex-wrap: wrap;
+    margin-top: 1rem;
+}
+
+.primary-button,
+.secondary-button {
+    flex: 1 1 auto;
+    text-align: center;
+}
+
+/* Help link */
+.form-help {
+    margin-top: 1rem;
+    text-align: center;
+}
+
+.help-link {
+    color: #4da6ff;
+    text-decoration: none;
+}
