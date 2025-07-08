@@ -46,9 +46,7 @@ Supports all HTML pages with consistent UI elements like navbars, buttons, and s
 
 Final project presentation in PDF format
 
-Summarizes the concept, goals, tech stack, feature highlights, and project flow
-
-Includes visuals and mockups for better understanding
+Summarizes the concept,problem statement,approach, goals, tech stack, feature highlights, and project flow
 
 Prepared for judges and mentors to quickly review the project vision and progress
 
