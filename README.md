@@ -10,6 +10,8 @@ Any UI template used: None
 🗳 NextGen Ballot – A Secure Digital Voting Platform
 NextGen Ballot is a modern, full-stack, secure and responsive digital voting web application built for hackathons and real-world scalability. It allows users to register, verify via Aadhaar & OTP (mocked), vote securely, and enables administrators to track total and remaining votes live.
 
+**CHECKPOINT 1**
+
 **📁 Files Uploaded:**
 
 **1️ index.html**
@@ -50,6 +52,8 @@ Summarizes the concept,problem statement,approach, goals, tech stack, feature hi
 
 Prepared for judges and mentors to quickly review the project vision and progress
 
+**CHECKPOINT 2**
+
 **index.html (Updated)**
 
 -Acts as the landing page for the platform
@@ -86,6 +90,51 @@ Prepared for judges and mentors to quickly review the project vision and progres
 
 -No frameworks like Bootstrap used — fully handwritten styling
 
+**CHECKPOINT 3**
 
+**style.css – Styling and Layout (In Progress)**
 
+-This file is responsible for the visual design and responsiveness of the platform
+
+-Currently includes styles for:
+
+-Header navigation and buttons
+
+-Hero section layout and typography
+
+-"About" and "How It Works" sections using modern grid-based layouts
+
+-Footer structure and styling
+
+-Login and verification forms (basic structure, spacing, and responsiveness)
+
+-Fonts, colors, spacing, and transitions have been partially implemented
+
+-Responsive behavior has been initiated for mobile viewports
+
+-Additional styling (form animations, mobile menu, admin panel, etc.) is still under development
+
+-No external libraries used; all styling is written in vanilla CSS
+
+**index.html – Main Landing Page**
+
+-Serves as the homepage of the NextGen Ballot voting platform
+
+-Includes a responsive navigation bar with links to: Home, About, How It Works, Login, and Admin
+
+-Features a structured hero section with platform overview, tagline, and call-to-action buttons
+
+-Clearly explains project value through an About section with three highlighted features
+
+-Outlines the user journey in a step-by-step format in the How It Works section
+
+-Footer section contains quick links and contact details
+
+-Uses semantic HTML5 structure and follows accessibility standards
+
+-Connected to shared style.css for consistent layout and design
+
+-Includes script.js and admin-login.js placeholders for future functionality
+
+-Fully responsive and optimized for desktop and mobile viewports
 
