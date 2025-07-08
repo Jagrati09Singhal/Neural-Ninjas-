@@ -164,4 +164,27 @@ Prepared for judges and mentors to quickly review the project vision and progres
 5. **Dependencies**
    - Uploaded JSON files (e.g., `package.json`) for dependency tracking (if backend/API simulated)
 
+**CHECKPOINT 5**
+## Features
+
+### Voter Module
+- CAPTCHA-based secure login
+- Responsive and user-friendly homepage
+- Candidate information with images and descriptions
+- Easy-to-use voting interface
+- Confirmation and thank-you message after voting
+
+### Admin Module
+- Admin login panel with CAPTCHA and error validation
+- Dashboard with real-time statistics:
+  - Total votes cast
+  - Unique voter count
+  - Candidate-wise vote distribution
+- Option to reset data with modal confirmation
+
+### UI and UX
+- Clean and modern design using CSS Flexbox and Grid
+- Fully responsive for mobile, tablet, and desktop views
+- Google Fonts integration for professional typography
+- Well-structured sections and accessibility consideration
 
