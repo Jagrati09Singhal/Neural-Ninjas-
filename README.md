@@ -50,3 +50,42 @@ Summarizes the concept,problem statement,approach, goals, tech stack, feature hi
 
 Prepared for judges and mentors to quickly review the project vision and progress
 
+**index.html (Updated)**
+
+Acts as the landing page for the platform
+
+Includes hero section, feature highlights, and step-by-step voting guide
+
+Clean navigation with responsive layout and CTA buttons
+
+Fully styled with style.css, no external UI templates used
+
+**login.html (Updated - Advanced Aadhaar + OTP Flow)**
+
+Handles voter authentication using Aadhaar number and phone
+
+CAPTCHA integrated via backend API (/captcha)
+
+OTP generation and verification via /send-otp and /verify-otp
+
+User info displayed after successful OTP generation
+
+Real-time error handling, input validations, and 15-min OTP countdown
+
+Uses fetch() with session support for secure API communication
+
+Clean, accessible, and fully responsive
+
+** style.css (Updated)**
+
+Custom CSS styling for both index and login pages
+
+Manages layout, typography, spacing, buttons, and responsive design
+
+Google Fonts (Inter) used for consistent modern UI
+
+No frameworks like Bootstrap used — fully handwritten styling
+
+
+
+
