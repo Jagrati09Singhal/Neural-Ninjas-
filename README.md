@@ -52,39 +52,39 @@ Prepared for judges and mentors to quickly review the project vision and progres
 
 **index.html (Updated)**
 
-Acts as the landing page for the platform
+-Acts as the landing page for the platform
 
-Includes hero section, feature highlights, and step-by-step voting guide
+-Includes hero section, feature highlights, and step-by-step voting guide
 
-Clean navigation with responsive layout and CTA buttons
+-Clean navigation with responsive layout and CTA buttons
 
-Fully styled with style.css, no external UI templates used
+-Fully styled with style.css, no external UI templates used
 
 **login.html (Updated - Advanced Aadhaar + OTP Flow)**
 
-Handles voter authentication using Aadhaar number and phone
+-Handles voter authentication using Aadhaar number and phone
 
-CAPTCHA integrated via backend API (/captcha)
+-CAPTCHA integrated via backend API (/captcha)
 
-OTP generation and verification via /send-otp and /verify-otp
+-OTP generation and verification via /send-otp and /verify-otp
 
-User info displayed after successful OTP generation
+-User info displayed after successful OTP generation
 
-Real-time error handling, input validations, and 15-min OTP countdown
+-Real-time error handling, input validations, and 15-min OTP countdown
 
-Uses fetch() with session support for secure API communication
+-Uses fetch() with session support for secure API communication
 
-Clean, accessible, and fully responsive
+-Clean, accessible, and fully responsive
 
-** style.css (Updated)**
+**style.css (Updated)**
 
-Custom CSS styling for both index and login pages
+-Custom CSS styling for both index and login pages
 
-Manages layout, typography, spacing, buttons, and responsive design
+-Manages layout, typography, spacing, buttons, and responsive design
 
-Google Fonts (Inter) used for consistent modern UI
+-Google Fonts (Inter) used for consistent modern UI
 
-No frameworks like Bootstrap used — fully handwritten styling
+-No frameworks like Bootstrap used — fully handwritten styling
 
 
 
