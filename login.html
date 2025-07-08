@@ -1,4 +1,4 @@
-!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
@@ -102,6 +102,7 @@
             </div>
         </div>
     </main>
+
     <script>
         document.addEventListener('DOMContentLoaded', function() {
             const API_URL = 'http://localhost:5000';
@@ -221,4 +222,95 @@
                         
                         // Start OTP timer
                         startOtpTimer();
-    
+                        
+                        // Disable inputs
+                        aadhaarInput.disabled = true;
+                        phoneInput.disabled = true;
+                        captchaInput.disabled = true;
+                        refreshCaptchaBtn.disabled = true;
+                    } else {
+                        // Show error and refresh CAPTCHA
+                        if (data.message.includes('CAPTCHA')) {
+                            captchaError.textContent = data.message;
+                        } else if (data.message.includes('Aadhaar')) {
+                            aadhaarError.textContent = data.message;
+                        } else if (data.message.includes('phone')) {
+                            phoneError.textContent = data.message;
+                        } else {
+                            captchaError.textContent = data.message;
+                        }
+                        loadCaptcha();
+                    }
+                })
+                .catch(error => {
+                    console.error('Error sending OTP:', error);
+                    captchaError.textContent = 'Failed to send OTP';
+                    loadCaptcha();
+                });
+            });
+
+            // OTP verification form submit handler
+            form.addEventListener('submit', function(e) {
+                e.preventDefault();
+                
+                // Clear previous errors
+                otpError.textContent = '';
+
+                const aadhaar = aadhaarInput.value.trim();
+                const otp = otpInput.value.trim();
+
+                if (!otp) {
+                    otpError.textContent = 'Please enter the OTP';
+                    return;
+                }
+
+                // Verify OTP
+                fetch(`${API_URL}/verify-otp`, {
+                    method: 'POST',
+                    credentials: 'include',
+                    headers: {
+                        'Content-Type': 'application/json'
+                    },
+                    body: JSON.stringify({
+                        aadhaar: aadhaar,
+                        otp: otp
+                    })
+                })
+                .then(response => response.json())
+                .then(data => {
+                    if (data.success) {
+                        // Redirect to voting page on success
+                        window.location.href = '/vote';
+                    } else {
+                        otpError.textContent = data.message;
+                    }
+                })
+                .catch(error => {
+                    console.error('Error verifying OTP:', error);
+                    otpError.textContent = 'Failed to verify OTP';
+                });
+            });
+
+            // Function to start OTP timer
+            function startOtpTimer() {
+                let timeLeft = 900; // 15 minutes in seconds
+                clearInterval(otpTimerInterval);
+
+                otpTimerInterval = setInterval(() => {
+                    const minutes = Math.floor(timeLeft / 60);
+                    const seconds = timeLeft % 60;
+                    otpTimer.textContent = `${minutes}:${seconds.toString().padStart(2, '0')}`;
+
+                    if (timeLeft <= 0) {
+                        clearInterval(otpTimerInterval);
+                        otpTimer.textContent = 'OTP expired';
+                        verifyOtpBtn.disabled = true;
+                    }
+
+                    timeLeft--;
+                }, 1000);
+            }
+        });
+    </script>
+</body>
+</html> 
