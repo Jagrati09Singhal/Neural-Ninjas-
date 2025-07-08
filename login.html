@@ -39,6 +39,18 @@
                     <div id="aadhaarError" class="error-message"></div>
                 </div>
 
+                <!-- Voter ID Input -->
+                <div class="form-group">
+                    <label for="voterId">Voter ID Card Number</label>
+                    <input type="text" id="voterId" name="voterId" required
+                        placeholder="Enter Voter ID (e.g., ABC1234567)"
+                        maxlength="10"
+                        pattern="[A-Z]{3}[0-9]{7}"
+                        title="Please enter a valid Voter ID (3 uppercase letters followed by 7 digits)">
+                    <div id="voterIdError" class="error-message"></div>
+                </div>
+
+
                 <!-- Phone Input -->
                 <div class="form-group">
                     <label for="phone">Phone Number</label>
@@ -123,12 +135,14 @@
             const userInfo = document.getElementById('userInfo');
             const userPhone = document.getElementById('userPhone');
             const userName = document.getElementById('userName');
+            const voterIdInput = document.getElementById('voterId');
 
             // Error elements
             const aadhaarError = document.getElementById('aadhaarError');
             const phoneError = document.getElementById('phoneError');
             const captchaError = document.getElementById('captchaError');
             const otpError = document.getElementById('otpError');
+            const voterIdError = document.getElementById('voterIdError');
 
             // Load CAPTCHA on page load
             loadCaptcha();
@@ -149,6 +163,11 @@
                 if (value.length > 10) value = value.slice(0, 10);
                 e.target.value = value;
             });
+
+            voterIdInput.addEventListener('input', function (e) {
+                e.target.value = e.target.value.toUpperCase().replace(/[^A-Z0-9]/g, '').slice(0, 10);
+            });
+
 
             // Function to load CAPTCHA
             function loadCaptcha() {
@@ -173,11 +192,15 @@
                 aadhaarError.textContent = '';
                 phoneError.textContent = '';
                 captchaError.textContent = '';
+                voterIdError.textContent = '';
+
 
                 // Validate inputs
                 const aadhaar = aadhaarInput.value.trim();
                 const phone = phoneInput.value.trim();
                 const captcha = captchaInput.value.trim();
+                const voterId = voterIdInput.value.trim();
+
 
                 if (!aadhaar) {
                     aadhaarError.textContent = 'Please enter your Aadhaar number';
@@ -194,6 +217,12 @@
                     return;
                 }
 
+                if (!voterId) {
+                    voterIdError.textContent = 'Please enter your Voter ID Card number';
+                    return;
+                }
+
+
                 // Send OTP request
                 fetch(`${API_URL}/send-otp`, {
                     method: 'POST',
@@ -204,7 +233,8 @@
                     body: JSON.stringify({
                         aadhaar: aadhaar,
                         phone: phone,
-                        captchaInput: captcha
+                        captchaInput: captcha,
+                        voterId: voterId
                     })
                 })
                 .then(response => response.json())
@@ -255,8 +285,9 @@
                 
                 // Clear previous errors
                 otpError.textContent = '';
-
+                
                 const aadhaar = aadhaarInput.value.trim();
+                
                 const otp = otpInput.value.trim();
 
                 if (!otp) {
@@ -312,5 +343,6 @@
             }
         });
     </script>
+    
 </body>
 </html> 
