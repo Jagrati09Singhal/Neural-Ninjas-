@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Admin Login - NextGen Ballot</title>
+    <link rel="stylesheet" href="styles/styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <header>
+        <nav>
+            <div class="logo">
+                <span class="logo-text">NextGen</span>
+                <span class="logo-accent">Ballot</span>
+            </div>
+            <ul class="nav-links">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="#about">About</a></li>
+                <li><a href="#how-it-works">How it Works</a></li>
+                <li><a href="login.html">Login</a></li>
+                <li><a href="adminlogin.html" class="nav-button active">Admin</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <section class="login-container">
+            <h1>Admin Panel Login</h1>
+            <p class="form-description">Enter your admin credentials to access the dashboard</p>
+
+            <form id="adminLoginForm" class="login-form">
+                <div class="form-group">
+                    <label for="adminId">Admin ID</label>
+                    <input type="text" id="adminId" name="adminId" required placeholder="Enter your Admin ID">
+                    <span class="error-message" id="adminIdError"></span>
+                </div>
+
+                <div class="form-group">
+                    <label for="adminPassword">Password</label>
+                    <input type="password" id="adminPassword" name="adminPassword" required placeholder="Enter your password">
+                    <span class="error-message" id="adminPasswordError"></span>
+                </div>
+
+                <div class="form-group captcha-container">
+                    <label>CAPTCHA Verification</label>
+                    <div class="captcha-box">
+                        <img id="captchaImage" alt="CAPTCHA" width="200" height="50">
+                        <button type="button" id="refreshCaptcha" aria-label="Refresh Captcha">↻</button>
+                    </div>
+                    <input type="text" id="captchaInput" name="captcha" required placeholder="Enter CAPTCHA" maxlength="6">
+                    <span class="error-message" id="captchaError"></span>
+                </div>
+
+                <div class="form-actions">
+                    <button type="submit" class="primary-button">Login</button>
+                </div>
+
+                <div class="form-help">
+                    <a href="#" class="help-link">Need help?</a>
+                </div>
+            </form>
+        </section>
+    </main>
+
+    <footer>
+        <div class="footer-content">
+            <div class="footer-section">
+                <h4>NextGen Ballot</h4>
+                <p>Making democracy more accessible</p>
+            </div>
+            <div class="footer-section">
+                <h4>Quick Links</h4>
+                <ul>
+                    <li><a href="index.html#about">About</a></li>
+                    <li><a href="index.html#how-it-works">How it Works</a></li>
+                    <li><a href="#" class="help-link">Help</a></li>
+                </ul>
+            </div>
+            <div class="footer-section">
+                <h4>Contact</h4>
+                <p>support@nextgenballot.com</p>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2025 NextGen Ballot. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script>
+        const captchaImage = document.getElementById('captchaImage');
+        const refreshCaptcha = document.getElementById('refreshCaptcha');
+
+        const loadCaptcha = () => {
+            fetch('http://localhost:5000/captcha', { credentials: 'include' })
+                .then(res => res.blob())
+                .then(blob => {
+                    captchaImage.src = URL.createObjectURL(blob);
+                });
+        };
+
+        refreshCaptcha.addEventListener('click', loadCaptcha);
+        document.addEventListener('DOMContentLoaded', loadCaptcha);
+
+        document.getElementById('adminLoginForm').addEventListener('submit', function (e) {
+            e.preventDefault();
+
+            // Basic client-side validation (you can enhance this)
+            const adminId = document.getElementById('adminId').value.trim();
+            const adminPassword = document.getElementById('adminPassword').value.trim();
+            const captcha = document.getElementById('captchaInput').value.trim();
+
+            if (!adminId || !adminPassword || !captcha) {
+                alert('Please fill in all fields including CAPTCHA.');
+                return;
+            }
+        });
+    </script>
+    <script src="scripts/adminlogin.js"></script>
+    
+
+</body>
+</html>
