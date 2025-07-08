@@ -129,3 +129,63 @@ nav {
     background: #e6f3ff;
     color: #4da6ff;
 }
+
+.secondary-button:hover {
+    background: #cceaff;
+}
+
+/* Hero Image */
+.hero-image {
+    flex: 1 1 300px;
+    text-align: center;
+}
+
+.image-placeholder svg {
+    width: 100%;
+    max-width: 300px;
+    color: #4da6ff;
+}
+
+/* Features */
+.features {
+    padding: 3rem 2rem;
+    max-width: 1200px;
+    margin: auto;
+    text-align: center;
+}
+
+.features h2 {
+    font-size: 2rem;
+    margin-bottom: 2rem;
+}
+
+.feature-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    gap: 1.5rem;
+}
+
+.feature-card {
+    background: #fff;
+    padding: 1.5rem;
+    border-radius: 8px;
+    box-shadow: 0 2px 6px rgba(0,0,0,0.05);
+}
+
+.feature-icon {
+    font-size: 2rem;
+    margin-bottom: 0.5rem;
+}
+
+/* How It Works */
+.how-it-works {
+    padding: 3rem 2rem;
+    max-width: 1200px;
+    margin: auto;
+    text-align: center;
+}
+
+.how-it-works h2 {
+    font-size: 2rem;
+    margin-bottom: 2rem;
+}
