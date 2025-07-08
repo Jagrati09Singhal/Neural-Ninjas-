@@ -102,5 +102,123 @@
             </div>
         </div>
     </main>
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            const API_URL = 'http://localhost:5000';
+            let otpTimerInterval;
 
+            // Elements
+            const form = document.getElementById('loginForm');
+            const aadhaarInput = document.getElementById('aadhaar');
+            const phoneInput = document.getElementById('phone');
+            const captchaInput = document.getElementById('captchaInput');
+            const captchaImage = document.getElementById('captchaImage');
+            const refreshCaptchaBtn = document.getElementById('refreshCaptcha');
+            const sendOtpBtn = document.getElementById('sendOtpBtn');
+            const otpSection = document.getElementById('otpSection');
+            const otpInput = document.getElementById('otp');
+            const verifyOtpBtn = document.getElementById('verifyOtpBtn');
+            const otpTimer = document.getElementById('otpTimer');
+            const userInfo = document.getElementById('userInfo');
+            const userPhone = document.getElementById('userPhone');
+            const userName = document.getElementById('userName');
+
+            // Error elements
+            const aadhaarError = document.getElementById('aadhaarError');
+            const phoneError = document.getElementById('phoneError');
+            const captchaError = document.getElementById('captchaError');
+            const otpError = document.getElementById('otpError');
+
+            // Load CAPTCHA on page load
+            loadCaptcha();
+
+            // Refresh CAPTCHA button click handler
+            refreshCaptchaBtn.addEventListener('click', loadCaptcha);
+
+            // Format Aadhaar number as user types
+            aadhaarInput.addEventListener('input', function(e) {
+                let value = e.target.value.replace(/\D/g, '');
+                if (value.length > 12) value = value.slice(0, 12);
+                e.target.value = value;
+            });
+
+            // Format phone number as user types
+            phoneInput.addEventListener('input', function(e) {
+                let value = e.target.value.replace(/\D/g, '');
+                if (value.length > 10) value = value.slice(0, 10);
+                e.target.value = value;
+            });
+
+            // Function to load CAPTCHA
+            function loadCaptcha() {
+                fetch(`${API_URL}/captcha`, {
+                    credentials: 'include' // Important for session cookies
+                })
+                .then(response => response.blob())
+                .then(blob => {
+                    captchaImage.src = URL.createObjectURL(blob);
+                    captchaInput.value = '';
+                    captchaError.textContent = '';
+                })
+                .catch(error => {
+                    console.error('Error loading CAPTCHA:', error);
+                    captchaError.textContent = 'Failed to load CAPTCHA';
+                });
+            }
+
+            // Send OTP button click handler
+            sendOtpBtn.addEventListener('click', function() {
+                // Clear previous errors
+                aadhaarError.textContent = '';
+                phoneError.textContent = '';
+                captchaError.textContent = '';
+
+                // Validate inputs
+                const aadhaar = aadhaarInput.value.trim();
+                const phone = phoneInput.value.trim();
+                const captcha = captchaInput.value.trim();
+
+                if (!aadhaar) {
+                    aadhaarError.textContent = 'Please enter your Aadhaar number';
+                    return;
+                }
+
+                if (!phone) {
+                    phoneError.textContent = 'Please enter your phone number';
+                    return;
+                }
+
+                if (!captcha) {
+                    captchaError.textContent = 'Please enter the CAPTCHA code';
+                    return;
+                }
+
+                // Send OTP request
+                fetch(`${API_URL}/send-otp`, {
+                    method: 'POST',
+                    credentials: 'include',
+                    headers: {
+                        'Content-Type': 'application/json'
+                    },
+                    body: JSON.stringify({
+                        aadhaar: aadhaar,
+                        phone: phone,
+                        captchaInput: captcha
+                    })
+                })
+                .then(response => response.json())
+                .then(data => {
+                    if (data.success) {
+                        // Show OTP section and user info
+                        otpSection.style.display = 'block';
+                        userInfo.style.display = 'block';
+                        sendOtpBtn.style.display = 'none';
+                        verifyOtpBtn.style.display = 'block';
+                        
+                        // Update user info
+                        userPhone.textContent = phone;
+                        userName.textContent = data.userData.name;
+                        
+                        // Start OTP timer
+                        startOtpTimer();
     
