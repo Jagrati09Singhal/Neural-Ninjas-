@@ -138,3 +138,30 @@ Prepared for judges and mentors to quickly review the project vision and progres
 
 -Fully responsive and optimized for desktop and mobile viewports
 
+**CHECKPOINT 4**
+
+1. **Authentication System (login.html + script.js)**
+   - Added input fields for Aadhaar number, Voter ID, and mobile number
+   - Integrated CAPTCHA validation and OTP input
+   - Included error messages and timer functionality for OTP resend
+
+2. **Complete Styling (styles/styles.css)**
+   - Enhanced mobile responsiveness
+   - Styled all sections: navigation, hero, features, login, admin dashboard
+   - Designed CAPTCHA, OTP, buttons, modals, and candidate cards
+
+3. **Admin Panel (admin.html + dashboard logic)**
+   - Created admin login form
+   - Built admin dashboard with:
+     - Total votes & unique voters count
+     - Candidate-wise vote stats (dynamic)
+     - Reset voting data feature with confirmation modal
+
+4. **Updated index.html (Home Page)**
+   - Added hero, about, and how-it-works sections
+   - Linked navigation and CTA buttons to login/admin pages
+
+5. **Dependencies**
+   - Uploaded JSON files (e.g., `package.json`) for dependency tracking (if backend/API simulated)
+
+
