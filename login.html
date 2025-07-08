@@ -1,0 +1,106 @@
+!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Voter Authentication - NextGen Ballot</title>
+    <link rel="stylesheet" href="/styles/styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <header>
+        <nav>
+            <a href="/" class="logo">
+                <span class="logo-text">NextGen</span>
+                <span class="logo-accent">Ballot</span>
+            </a>
+            <ul class="nav-links">
+                <li><a href="/">Home</a></li>
+                <li><a href="/about">About</a></li>
+                <li><a href="/contact">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <div class="login-container">
+            <h1>Voter Authentication</h1>
+            <p class="form-description">Please verify your identity using Aadhaar</p>
+
+            <form id="loginForm" class="login-form">
+                <!-- Aadhaar Input -->
+                <div class="form-group">
+                    <label for="aadhaar">Aadhaar Number</label>
+                    <input type="text" id="aadhaar" name="aadhaar" required
+                           placeholder="Enter 12-digit Aadhaar number"
+                           maxlength="12"
+                           pattern="\d{12}"
+                           title="Please enter a valid 12-digit Aadhaar number">
+                    <div id="aadhaarError" class="error-message"></div>
+                </div>
+
+                <!-- Phone Input -->
+                <div class="form-group">
+                    <label for="phone">Phone Number</label>
+                    <input type="tel" id="phone" name="phone" required
+                           placeholder="Enter 10-digit phone number"
+                           maxlength="10"
+                           pattern="[6-9]\d{9}"
+                           title="Please enter a valid 10-digit phone number">
+                    <div id="phoneError" class="error-message"></div>
+                </div>
+
+                <!-- CAPTCHA -->
+                <div class="form-group">
+                    <label>CAPTCHA Verification</label>
+                    <div class="captcha-container">
+                        <div class="captcha-box">
+                            <img id="captchaImage" alt="CAPTCHA" width="200" height="50">
+                            <button type="button" id="refreshCaptcha" aria-label="Refresh CAPTCHA">
+                                ↻
+                            </button>
+                        </div>
+                        <input type="text" id="captchaInput" required
+                               placeholder="Enter the code above"
+                               maxlength="6">
+                        <div id="captchaError" class="error-message"></div>
+                    </div>
+                </div>
+
+                <!-- OTP Section (initially hidden) -->
+                <div id="otpSection" class="form-group" style="display: none;">
+                    <label for="otp">Enter OTP</label>
+                    <div class="otp-container">
+                        <input type="text" id="otp" name="otp"
+                               placeholder="Enter 6-digit OTP"
+                               maxlength="6"
+                               pattern="\d{6}">
+                        <span id="otpTimer" class="otp-timer"></span>
+                    </div>
+                    <div id="otpError" class="error-message"></div>
+                </div>
+
+                <!-- User Info Section (shown after successful OTP send) -->
+                <div id="userInfo" class="form-group" style="display: none;">
+                    <p>Verification code will be sent to: <strong id="userPhone"></strong></p>
+                    <p>Name: <strong id="userName"></strong></p>
+                </div>
+
+                <!-- Form Actions -->
+                <div class="form-actions">
+                    <button type="button" id="sendOtpBtn" class="primary-button">
+                        Send OTP
+                    </button>
+                    <button type="submit" id="verifyOtpBtn" class="primary-button" style="display: none;">
+                        Verify OTP
+                    </button>
+                </div>
+            </form>
+
+            <div class="form-help">
+                <a href="#" class="help-link">Need help?</a>
+            </div>
+        </div>
+    </main>
+
+    
