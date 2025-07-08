@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Admin Dashboard - NextGen Ballot</title>
+  <link rel="stylesheet" href="styles/styles.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet" />
+</head>
+<body>
+  <header>
+    <nav>
+      <div class="logo">
+        <span class="logo-text">NextGen</span>
+        <span class="logo-accent">Ballot</span>
+      </div>
+      <ul class="nav-links">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="adminlogin.html">Logout</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main>
+    <section class="dashboard-container">
+      <h1>Admin Dashboard</h1>
+      <p class="dashboard-subtitle">Live Voting Results and Stats</p>
+
+      <div class="stats-overview">
+        <div class="stat-card">
+          <h2>Total Votes Cast</h2>
+          <p id="totalVotes">0</p>
+        </div>
+        <div class="stat-card">
+          <h2>Remaining Voters</h2>
+          <p id="remainingVotes">0</p>
+        </div>
+      </div>
+
+      <div class="results-grid" id="candidateResults">
+        <!-- Dynamically populated -->
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <div class="footer-content">
+      <div class="footer-section">
+        <h4>NextGen Ballot</h4>
+        <p>Making democracy more accessible</p>
+      </div>
+      <div class="footer-section">
+        <h4>Contact</h4>
+        <p>support@nextgenballot.com</p>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <p>&copy; 2025 NextGen Ballot. All rights reserved.</p>
+    </div>
+  </footer>
+
+  <script src="scripts/dashboard.js"></script>
+  
+</body>
+</html>
