@@ -54,8 +54,8 @@ node server.js
 
 ### 5. Admin Login:
 
-   Username: admin
-   Password: admin123
+- Username: admin
+- Password: admin123
 
 ## Screenshots:
 
