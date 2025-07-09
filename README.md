@@ -189,7 +189,36 @@ Prepared for judges and mentors to quickly review the project vision and progres
 - Well-structured sections and accessibility consideration
 
 
-🔐 Important Notes:
+**✅ Update – Day 2**
 
-How to setup .env file: 
-Replace username and password with your own MongoDB Atlas credentials.
+**CHECKPOINT 1**
+
+This update introduces significant improvements to both frontend and backend components of the NextGen Ballot platform.
+
+**dashboard.html**
+– Developed an admin dashboard for real-time election insights
+– Displays total votes, unique voters, and candidate-wise vote stats
+– Includes reset functionality with modal confirmation
+– Designed with responsive layout using Flexbox and Grid
+
+**thankyou.html**
+– Designed a post-voting confirmation page
+– Ensures voters receive visual feedback after casting their vote
+– Clean and accessible UI consistent with the main application
+
+**result.html**
+– Displays final voting results in an organized layout
+– Candidate-wise result cards for easy interpretation
+– Future-compatible for real-time API-based result fetching
+
+**server.js**
+– Node.js + Express backend to support dynamic routes and APIs
+– Handles static file serving, admin login, session & CAPTCHA verification
+– Integrated vote submission and admin reset endpoints
+
+ **.env**
+– Added secure configuration via .env file
+– Stores variables like PORT, session secret, and other sensitive keys
+– Ensures environment-specific flexibility and security
+
+
