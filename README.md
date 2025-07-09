@@ -228,3 +228,10 @@ This update introduces significant improvements to both frontend and backend com
 – Vote button integrated per candidate
 – Fully responsive using CSS Grid
 – Aligned with platform’s existing design
+
+ **CHECKPOINT 3**
+**Uploaded routes/voteRoutes.js and scripts/ folder**
+Changes Made:
+Backend API routing (/api/register, /api/vote, etc.)
+Admin and Dashboard client logic scripts for UI interaction
+Captcha, OTP, and vote route handling
