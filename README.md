@@ -106,7 +106,7 @@ https://drive.google.com/file/d/1KfmV1Kvvvw38NoxHbC6DEowiVMQJhzgs/view?usp=drive
 
 **📁 Files Uploaded:**
 
-**1️ index.html**
+**1️.index.html**
 
 -Serves as the main landing page of the application
 
@@ -116,7 +116,7 @@ https://drive.google.com/file/d/1KfmV1Kvvvw38NoxHbC6DEowiVMQJhzgs/view?usp=drive
 
 -Designed to be responsive and visually appealing using custom icons and layout
 
-**2️ login.html**
+**2️.login.html**
 
 -Contains a minimal and user-friendly login interface for voters
 
@@ -126,7 +126,7 @@ https://drive.google.com/file/d/1KfmV1Kvvvw38NoxHbC6DEowiVMQJhzgs/view?usp=drive
 
 -Backend integration using Node.js and Express is planned for authentication
 
-**3️ style.css**
+**3️.style.css**
 
 -Custom CSS built from scratch (no external frameworks used)
 
@@ -136,7 +136,7 @@ https://drive.google.com/file/d/1KfmV1Kvvvw38NoxHbC6DEowiVMQJhzgs/view?usp=drive
 
 -Supports all HTML pages with consistent UI elements like navbars, buttons, and sections
 
-**4️ Final_PPT.pdf**
+**4️.Final_PPT.pdf**
 
 -Final project presentation in PDF format
 
