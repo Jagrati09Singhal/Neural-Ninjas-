@@ -1,4 +1,4 @@
-## Team: Neural-Ninjas-
+## Team: Neural Ninjas
 ## HackOrbit Hackathon
 
 ### HackOrbit Project
