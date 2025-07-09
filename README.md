@@ -102,7 +102,7 @@ https://drive.google.com/file/d/1KfmV1Kvvvw38NoxHbC6DEowiVMQJhzgs/view?usp=drive
 
 
 
-**CHECKPOINT 1**
+ ## CHECKPOINT 1
 
 **📁 Files Uploaded:**
 
@@ -144,7 +144,7 @@ https://drive.google.com/file/d/1KfmV1Kvvvw38NoxHbC6DEowiVMQJhzgs/view?usp=drive
 
 -Prepared for judges and mentors to quickly review the project vision and progress
 
-**CHECKPOINT 2**
+## CHECKPOINT 2
 
 **index.html (Updated)**
 
@@ -182,7 +182,7 @@ https://drive.google.com/file/d/1KfmV1Kvvvw38NoxHbC6DEowiVMQJhzgs/view?usp=drive
 
 -No frameworks like Bootstrap used — fully handwritten styling
 
-**CHECKPOINT 3**
+## CHECKPOINT 3
 
 **style.css – Styling and Layout (In Progress)**
 
@@ -230,7 +230,7 @@ https://drive.google.com/file/d/1KfmV1Kvvvw38NoxHbC6DEowiVMQJhzgs/view?usp=drive
 
 -Fully responsive and optimized for desktop and mobile viewports
 
-**CHECKPOINT 4**
+## CHECKPOINT 4
 
 1. **Authentication System (login.html + script.js)**
 
@@ -270,7 +270,7 @@ https://drive.google.com/file/d/1KfmV1Kvvvw38NoxHbC6DEowiVMQJhzgs/view?usp=drive
 
    - Uploaded JSON files (e.g., `package.json`) for dependency tracking (if backend/API simulated)
 
-**CHECKPOINT 5**
+## CHECKPOINT 5
 
 ## Features
 
@@ -311,9 +311,9 @@ https://drive.google.com/file/d/1KfmV1Kvvvw38NoxHbC6DEowiVMQJhzgs/view?usp=drive
 - Well-structured sections and accessibility consideration
 
 
-**✅ Update – Day 2**
+ ### ✅ Update – Day 2
 
-**CHECKPOINT 1**
+## CHECKPOINT 1
 
 This update introduces significant improvements to both frontend and backend components of the NextGen Ballot platform.
 
@@ -359,7 +359,7 @@ This update introduces significant improvements to both frontend and backend com
 
 – Ensures environment-specific flexibility and security
 
- **CHECKPOINT 2**
+## CHECKPOINT 2
 
 **Update: vote.html added**
 
@@ -371,7 +371,7 @@ This update introduces significant improvements to both frontend and backend com
 
 – Aligned with platform’s existing design
 
- **CHECKPOINT 3**
+## CHECKPOINT 3
  
 **Uploaded routes/voteRoutes.js and scripts/ folder**
 
@@ -383,7 +383,7 @@ Changes Made:
 
 -Captcha, OTP, and vote route handling
 
-**CHECKPOINT 4**
+## CHECKPOINT 4
 
 **uploaded images/ folder and updated README**
 
