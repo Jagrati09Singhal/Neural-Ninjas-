@@ -221,4 +221,10 @@ This update introduces significant improvements to both frontend and backend com
 – Stores variables like PORT, session secret, and other sensitive keys
 – Ensures environment-specific flexibility and security
 
+ **CHECKPOINT 2**
 
+**Update: vote.html added**
+– Voting interface with candidate cards
+– Vote button integrated per candidate
+– Fully responsive using CSS Grid
+– Aligned with platform’s existing design
