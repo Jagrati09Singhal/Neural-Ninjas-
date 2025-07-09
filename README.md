@@ -10,6 +10,71 @@ Any UI template used: None
 🗳 NextGen Ballot – A Secure Digital Voting Platform
 NextGen Ballot is a modern, full-stack, secure and responsive digital voting web application built for hackathons and real-world scalability. It allows users to register, verify via Aadhaar & OTP (mocked), vote securely, and enables administrators to track total and remaining votes live.
 
+
+Features:
+
+- Aadhaar and Voter ID-based authentication
+- CAPTCHA + OTP verification
+- Admin Dashboard with live results
+- Secure voting with one-vote-per-user logic
+- MongoDB integration for persistent storage
+- Responsive and intuitive UI
+
+
+
+How To Setup Things:
+
+1. Install Dependencies:
+   Using  (npm install)  command in your terminal
+
+2. Add Your Username and Password in the .env file for MongoDB connection:
+
+   MONGO_URI= mongodb+srv://<username>:<password>@cluster01.clagshx.mongodb.net/?retryWrites=true&w=majority&appName=Cluster01
+   PORT=5000
+   NODE_ENV=development
+
+3. Backend (Node Server):
+   Run   node server.js  on your terminal
+
+4. Dummy Data For Testing:
+
+   Aadhar: 485663215457,   phone: 4523658795,   voter id: YJK7896554 
+   Aadhar: 987465632445,   phone: 4654653157,   Voter id: RWT1236548
+   
+   Note: OTP will be logged in your terminal, not sent via SMS in this mock version.
+
+5. Admin Login:
+
+   Username: admin
+   Password: admin123
+
+6. Screenshots:
+
+   Home Page:
+   ![image](https://github.com/user-attachments/assets/95e070e2-b3ee-4fc9-8ca3-0c824150f632)
+
+
+   Login Page:
+   ![image](https://github.com/user-attachments/assets/46dacb93-ee48-46e9-bf3e-eb6f5ef335c4)
+
+   Admin Page:
+   ![image](https://github.com/user-attachments/assets/2ea15bee-8964-4430-918b-e26aaa439cfc)
+
+   
+   Voting Page:
+   ![image](https://github.com/user-attachments/assets/d377b6ff-70c6-49dd-aed5-e058cd4372d7)
+
+   
+7. Project Demo:
+You can view the full working demo of the project here:
+
+Click Here:  https://drive.google.com/file/d/1KfmV1Kvvvw38NoxHbC6DEowiVMQJhzgs/view?usp=drive_link
+
+
+
+
+
+
 **CHECKPOINT 1**
 
 **📁 Files Uploaded:**
