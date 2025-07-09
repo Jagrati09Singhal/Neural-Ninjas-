@@ -48,7 +48,7 @@ After creating your cluster and getting your connection string, follow these ste
 3. Click on **"Add IP Address"**.
 4. Select **"Allow Access from Anywhere"** (adds `0.0.0.0/0`).
 
- > 🔒 For development only. For production, whitelist specific IPs.
+ > 🔒 For development only.
 
 5. Click **Confirm**.
 
