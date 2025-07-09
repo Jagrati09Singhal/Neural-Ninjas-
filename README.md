@@ -192,4 +192,4 @@ Prepared for judges and mentors to quickly review the project vision and progres
 🔐 Important Notes:
 
 How to setup .env file: 
-Replace <username> and <password> with your own MongoDB Atlas credentials.
+Replace username and password with your own MongoDB Atlas credentials.
