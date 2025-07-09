@@ -108,41 +108,41 @@ https://drive.google.com/file/d/1KfmV1Kvvvw38NoxHbC6DEowiVMQJhzgs/view?usp=drive
 
 **1️ index.html**
 
-Serves as the main landing page of the application
+-Serves as the main landing page of the application
 
-Includes a hero section, an overview of the platform, and a step-by-step explanation of how it works
+-Includes a hero section, an overview of the platform, and a step-by-step explanation of how it works
 
-Features clean navigation and clear call-to-action buttons
+-Features clean navigation and clear call-to-action buttons
 
-Designed to be responsive and visually appealing using custom icons and layout
+-Designed to be responsive and visually appealing using custom icons and layout
 
 **2️ login.html**
 
-Contains a minimal and user-friendly login interface for voters
+-Contains a minimal and user-friendly login interface for voters
 
-Inputs for email and password
+-Inputs for email and password
 
-Styled to match the homepage for design consistency
+-Styled to match the homepage for design consistency
 
-Backend integration using Node.js and Express is planned for authentication
+-Backend integration using Node.js and Express is planned for authentication
 
 **3️ style.css**
 
-Custom CSS built from scratch (no external frameworks used)
+-Custom CSS built from scratch (no external frameworks used)
 
-Manages the layout, color scheme, typography, and responsiveness across all pages
+-Manages the layout, color scheme, typography, and responsiveness across all pages
 
-Ensures a cohesive and modern look using the 'Inter' font from Google Fonts
+-Ensures a cohesive and modern look using the 'Inter' font from Google Fonts
 
-Supports all HTML pages with consistent UI elements like navbars, buttons, and sections
+-Supports all HTML pages with consistent UI elements like navbars, buttons, and sections
 
 **4️ Final_PPT.pdf**
 
-Final project presentation in PDF format
+-Final project presentation in PDF format
 
-Summarizes the concept,problem statement,approach, goals, tech stack, feature highlights, and project flow
+-Summarizes the concept,problem statement,approach, goals, tech stack, feature highlights, and project flow
 
-Prepared for judges and mentors to quickly review the project vision and progress
+-Prepared for judges and mentors to quickly review the project vision and progress
 
 **CHECKPOINT 2**
 
@@ -233,51 +233,81 @@ Prepared for judges and mentors to quickly review the project vision and progres
 **CHECKPOINT 4**
 
 1. **Authentication System (login.html + script.js)**
-   - Added input fields for Aadhaar number, Voter ID, and mobile number
-   - Integrated CAPTCHA validation and OTP input
-   - Included error messages and timer functionality for OTP resend
 
-2. **Complete Styling (styles/styles.css)**
-   - Enhanced mobile responsiveness
-   - Styled all sections: navigation, hero, features, login, admin dashboard
+    - Added input fields for Aadhaar number, Voter ID, and mobile number
+ 
+   - Integrated CAPTCHA validation and OTP input
+
+    - Included error messages and timer functionality for OTP resend
+
+3. **Complete Styling (styles/styles.css)**
+
+    - Enhanced mobile responsiveness
+
+    - Styled all sections: navigation, hero, features, login, admin dashboard
+
    - Designed CAPTCHA, OTP, buttons, modals, and candidate cards
 
-3. **Admin Panel (admin.html + dashboard logic)**
-   - Created admin login form
-   - Built admin dashboard with:
-     - Total votes & unique voters count
-     - Candidate-wise vote stats (dynamic)
-     - Reset voting data feature with confirmation modal
+4. **Admin Panel (admin.html + dashboard logic)**
 
-4. **Updated index.html (Home Page)**
-   - Added hero, about, and how-it-works sections
+    - Created admin login form
+
+   - Built admin dashboard with:
+
+     - Total votes & unique voters count
+
+     - Candidate-wise vote stats (dynamic)
+
+      - Reset voting data feature with confirmation modal
+
+5. **Updated index.html (Home Page)**
+
+    - Added hero, about, and how-it-works sections
+
    - Linked navigation and CTA buttons to login/admin pages
 
-5. **Dependencies**
+6. **Dependencies**
+
    - Uploaded JSON files (e.g., `package.json`) for dependency tracking (if backend/API simulated)
 
 **CHECKPOINT 5**
+
 ## Features
 
 ### Voter Module
+
 - CAPTCHA-based secure login
+
 - Responsive and user-friendly homepage
+
 - Candidate information with images and descriptions
+
 - Easy-to-use voting interface
+
 - Confirmation and thank-you message after voting
 
 ### Admin Module
+
 - Admin login panel with CAPTCHA and error validation
+
 - Dashboard with real-time statistics:
+
   - Total votes cast
+
   - Unique voter count
-  - Candidate-wise vote distribution
+
+   - Candidate-wise vote distribution
+
 - Option to reset data with modal confirmation
 
 ### UI and UX
+
 - Clean and modern design using CSS Flexbox and Grid
+
 - Fully responsive for mobile, tablet, and desktop views
+
 - Google Fonts integration for professional typography
+
 - Well-structured sections and accessibility consideration
 
 
@@ -288,51 +318,78 @@ Prepared for judges and mentors to quickly review the project vision and progres
 This update introduces significant improvements to both frontend and backend components of the NextGen Ballot platform.
 
 **dashboard.html**
+
 – Developed an admin dashboard for real-time election insights
+
 – Displays total votes, unique voters, and candidate-wise vote stats
+
 – Includes reset functionality with modal confirmation
+
 – Designed with responsive layout using Flexbox and Grid
 
 **thankyou.html**
+
 – Designed a post-voting confirmation page
+
 – Ensures voters receive visual feedback after casting their vote
+
 – Clean and accessible UI consistent with the main application
 
 **result.html**
+
 – Displays final voting results in an organized layout
+
 – Candidate-wise result cards for easy interpretation
+
 – Future-compatible for real-time API-based result fetching
 
 **server.js**
+
 – Node.js + Express backend to support dynamic routes and APIs
+
 – Handles static file serving, admin login, session & CAPTCHA verification
+
 – Integrated vote submission and admin reset endpoints
 
  **.env**
+
 – Added secure configuration via .env file
+
 – Stores variables like PORT, session secret, and other sensitive keys
+
 – Ensures environment-specific flexibility and security
 
  **CHECKPOINT 2**
 
 **Update: vote.html added**
+
 – Voting interface with candidate cards
+
 – Vote button integrated per candidate
+
 – Fully responsive using CSS Grid
+
 – Aligned with platform’s existing design
 
  **CHECKPOINT 3**
  
 **Uploaded routes/voteRoutes.js and scripts/ folder**
+
 Changes Made:
+
 -Backend API routing (/api/register, /api/vote, etc.)
+
 -Admin and Dashboard client logic scripts for UI interaction
+
 -Captcha, OTP, and vote route handling
 
 **CHECKPOINT 4**
 
 **uploaded images/ folder and updated README**
+
 Changes Made:
+
 -Added logo/static images used in UI
+
 -Updated README with screenshots, setup, and usage instructions
 
