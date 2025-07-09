@@ -47,8 +47,8 @@ node server.js
 
 ### 4. Dummy Data For Testing:
 
-   Aadhar: 485663215457,   phone: 4523658795,   voter id: YJK7896554 
-   Aadhar: 987465632445,   phone: 4654653157,   Voter id: RWT1236548
+- Aadhar: 485663215457,   phone: 4523658795,   voter id: YJK7896554 
+- Aadhar: 987465632445,   phone: 4654653157,   Voter id: RWT1236548
    
    Note: OTP will be logged in your terminal, not sent via SMS in this mock version.
 
@@ -76,7 +76,7 @@ node server.js
    
 ## Project Demo:
 You can view the full working demo of the project here:
-### Click Here
+### Link:
 ```bash
 https://drive.google.com/file/d/1KfmV1Kvvvw38NoxHbC6DEowiVMQJhzgs/view?usp=drive_link
 ``` 
