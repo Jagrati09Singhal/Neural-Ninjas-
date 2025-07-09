@@ -108,127 +108,127 @@ https://drive.google.com/file/d/1KfmV1Kvvvw38NoxHbC6DEowiVMQJhzgs/view?usp=drive
 
 **1️.index.html**
 
--Serves as the main landing page of the application
+- Serves as the main landing page of the application
 
--Includes a hero section, an overview of the platform, and a step-by-step explanation of how it works
+- Includes a hero section, an overview of the platform, and a step-by-step explanation of how it works
 
--Features clean navigation and clear call-to-action buttons
+- Features clean navigation and clear call-to-action buttons
 
--Designed to be responsive and visually appealing using custom icons and layout
+- Designed to be responsive and visually appealing using custom icons and layout
 
 **2️.login.html**
 
--Contains a minimal and user-friendly login interface for voters
+- Contains a minimal and user-friendly login interface for voters
 
--Inputs for email and password
+- Inputs for email and password
 
--Styled to match the homepage for design consistency
+- Styled to match the homepage for design consistency
 
--Backend integration using Node.js and Express is planned for authentication
+- Backend integration using Node.js and Express is planned for authentication
 
 **3️.style.css**
 
--Custom CSS built from scratch (no external frameworks used)
+- Custom CSS built from scratch (no external frameworks used)
 
--Manages the layout, color scheme, typography, and responsiveness across all pages
+- Manages the layout, color scheme, typography, and responsiveness across all pages
 
--Ensures a cohesive and modern look using the 'Inter' font from Google Fonts
+- Ensures a cohesive and modern look using the 'Inter' font from Google Fonts
 
--Supports all HTML pages with consistent UI elements like navbars, buttons, and sections
+- Supports all HTML pages with consistent UI elements like navbars, buttons, and sections
 
 **4️.Final_PPT.pdf**
 
--Final project presentation in PDF format
+- Final project presentation in PDF format
 
--Summarizes the concept,problem statement,approach, goals, tech stack, feature highlights, and project flow
+- Summarizes the concept,problem statement,approach, goals, tech stack, feature highlights, and project flow
 
--Prepared for judges and mentors to quickly review the project vision and progress
+- Prepared for judges and mentors to quickly review the project vision and progress
 
 ## CHECKPOINT 2
 
 **index.html (Updated)**
 
--Acts as the landing page for the platform
+- Acts as the landing page for the platform
 
--Includes hero section, feature highlights, and step-by-step voting guide
+- Includes hero section, feature highlights, and step-by-step voting guide
 
--Clean navigation with responsive layout and CTA buttons
+- Clean navigation with responsive layout and CTA buttons
 
--Fully styled with style.css, no external UI templates used
+- Fully styled with style.css, no external UI templates used
 
 **login.html (Updated - Advanced Aadhaar + OTP Flow)**
 
--Handles voter authentication using Aadhaar number and phone
+- Handles voter authentication using Aadhaar number and phone
 
--CAPTCHA integrated via backend API (/captcha)
+- CAPTCHA integrated via backend API (/captcha)
 
--OTP generation and verification via /send-otp and /verify-otp
+- OTP generation and verification via /send-otp and /verify-otp
 
--User info displayed after successful OTP generation
+- User info displayed after successful OTP generation
 
--Real-time error handling, input validations, and 15-min OTP countdown
+- Real-time error handling, input validations, and 15-min OTP countdown
 
--Uses fetch() with session support for secure API communication
+- Uses fetch() with session support for secure API communication
 
--Clean, accessible, and fully responsive
+- Clean, accessible, and fully responsive
 
 **style.css (Updated)**
 
--Custom CSS styling for both index and login pages
+- Custom CSS styling for both index and login pages
 
--Manages layout, typography, spacing, buttons, and responsive design
+- Manages layout, typography, spacing, buttons, and responsive design
 
--Google Fonts (Inter) used for consistent modern UI
+- Google Fonts (Inter) used for consistent modern UI
 
--No frameworks like Bootstrap used — fully handwritten styling
+- No frameworks like Bootstrap used — fully handwritten styling
 
 ## CHECKPOINT 3
 
 **style.css – Styling and Layout (In Progress)**
 
--This file is responsible for the visual design and responsiveness of the platform
+- This file is responsible for the visual design and responsiveness of the platform
 
--Currently includes styles for:
+- Currently includes styles for:
 
--Header navigation and buttons
+- Header navigation and buttons
 
--Hero section layout and typography
+- Hero section layout and typography
 
--"About" and "How It Works" sections using modern grid-based layouts
+- "About" and "How It Works" sections using modern grid-based layouts
 
--Footer structure and styling
+- Footer structure and styling
 
--Login and verification forms (basic structure, spacing, and responsiveness)
+- Login and verification forms (basic structure, spacing, and responsiveness)
 
--Fonts, colors, spacing, and transitions have been partially implemented
+- Fonts, colors, spacing, and transitions have been partially implemented
 
--Responsive behavior has been initiated for mobile viewports
+- Responsive behavior has been initiated for mobile viewports
 
--Additional styling (form animations, mobile menu, admin panel, etc.) is still under development
+- Additional styling (form animations, mobile menu, admin panel, etc.) is still under development
 
--No external libraries used; all styling is written in vanilla CSS
+- No external libraries used; all styling is written in vanilla CSS
 
 **index.html – Main Landing Page**
 
--Serves as the homepage of the NextGen Ballot voting platform
+- Serves as the homepage of the NextGen Ballot voting platform
 
--Includes a responsive navigation bar with links to: Home, About, How It Works, Login, and Admin
+- Includes a responsive navigation bar with links to: Home, About, How It Works, Login, and Admin
 
--Features a structured hero section with platform overview, tagline, and call-to-action buttons
+- Features a structured hero section with platform overview, tagline, and call-to-action buttons
 
--Clearly explains project value through an About section with three highlighted features
+- Clearly explains project value through an About section with three highlighted features
 
--Outlines the user journey in a step-by-step format in the How It Works section
+- Outlines the user journey in a step-by-step format in the How It Works section
 
--Footer section contains quick links and contact details
+- Footer section contains quick links and contact details
 
--Uses semantic HTML5 structure and follows accessibility standards
+- Uses semantic HTML5 structure and follows accessibility standards
 
--Connected to shared style.css for consistent layout and design
+- Connected to shared style.css for consistent layout and design
 
--Includes script.js and admin-login.js placeholders for future functionality
+- Includes script.js and admin-login.js placeholders for future functionality
 
--Fully responsive and optimized for desktop and mobile viewports
+- Fully responsive and optimized for desktop and mobile viewports
 
 ## CHECKPOINT 4
 
@@ -377,11 +377,11 @@ This update introduces significant improvements to both frontend and backend com
 
 Changes Made:
 
--Backend API routing (/api/register, /api/vote, etc.)
+- Backend API routing (/api/register, /api/vote, etc.)
 
--Admin and Dashboard client logic scripts for UI interaction
+- Admin and Dashboard client logic scripts for UI interaction
 
--Captcha, OTP, and vote route handling
+- Captcha, OTP, and vote route handling
 
 ## CHECKPOINT 4
 
@@ -389,7 +389,7 @@ Changes Made:
 
 Changes Made:
 
--Added logo/static images used in UI
+- Added logo/static images used in UI
 
--Updated README with screenshots, setup, and usage instructions
+- Updated README with screenshots, setup, and usage instructions
 
