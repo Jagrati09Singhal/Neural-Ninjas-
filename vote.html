@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Vote - NextGen Ballot</title>
+    <link rel="stylesheet" href="/styles/styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <header>
+        <nav>
+            <div class="logo">
+                <span class="logo-text">NextGen</span>
+                <span class="logo-accent">Ballot</span>
+            </div>
+            <ul class="nav-links">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="index.html#about">About</a></li>
+                <li><a href="index.html#how-it-works">How it Works</a></li>
+                <li><a href="login.html">Login</a></li>
+            </ul>
+            <button class="mobile-menu-button" aria-label="Menu">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+        </nav>
+    </header>
+
+    <main>
+        <section class="voting-section">
+            <div class="voting-header">
+                <h1>Cast Your Vote</h1>
+                <p class="election-info">City Council Election 2024</p>
+                <div class="voting-instructions">
+                    <p>Please review each candidate carefully before casting your vote.</p>
+                    <p class="note">Note: Your vote is final and cannot be changed once submitted.</p>
+                </div>
+            </div>
+
+            <div class="candidates-grid" id="candidatesGrid">
+                <div class="candidate-card" data-candidate-id="1">
+                    <div class="candidate-image">
+                        <img src="images/image 1.jpeg" alt="ChatGpt" class="placeholder-image">
+                    </div>
+                    <div class="candidate-info">
+                        <h2 class="candidate-name">Chatgpt</h2>
+                        <p class="candidate-party">Progressive Party</p>
+                        <div class="candidate-details">
+                            <p>Experience: 12 years in public service</p>
+                            <p>Key Focus: Environmental sustainability, Education</p>
+                        </div>
+                        <button class="vote-button primary-button" data-candidate-id="1">
+                            Vote for ChatGpt
+                        </button>
+                    </div>
+                </div>
+
+                <div class="candidate-card" data-candidate-id="2">
+                    <div class="candidate-image">
+                        <img src="images/image 2.png" alt="Gemini" class="placeholder-image">
+                    </div>
+                    <div class="candidate-info">
+                        <h2 class="candidate-name">Gemini</h2>
+                        <p class="candidate-party">Citizens Alliance</p>
+                        <div class="candidate-details">
+                            <p>Experience: 8 years as AI Representative</p>
+                            <p>Key Focus: Economic growth, Infrastructure</p>
+                        </div>
+                        <button class="vote-button primary-button" data-candidate-id="2">
+                            Vote for Gemini
+                        </button>
+                    </div>
+                </div>
+
+                <div class="candidate-card" data-candidate-id="3">
+                    <div class="candidate-image">
+                        <img src="images/image 3.png" alt="Claude" class="placeholder-image">
+                    </div>
+                    <div class="candidate-info">
+                        <h2 class="candidate-name">Claude</h2>
+                        <p class="candidate-party">Unity Coalition</p>
+                        <div class="candidate-details">
+                            <p>Experience: 15 years in AI Leadership</p>
+                            <p>Key Focus: Healthcare, Social equity, Ownership</p>
+                        </div>
+                        <button class="vote-button primary-button" data-candidate-id="3">
+                            Vote for Claude
+                        </button>
+                    </div>
+                </div>
+
+                <div class="candidate-card" data-candidate-id="4">
+                    <div class="candidate-image">
+                        <img src="images/image 4.jpeg" alt="Lenonardo AI" class="placeholder-image">
+                    </div>
+                    <div class="candidate-info">
+                        <h2 class="candidate-name">Lenonardo AI</h2>
+                        <p class="candidate-party">Reform Movement</p>
+                        <div class="candidate-details">
+                            <p>Experience: 10 years in Image Generation, Expert in AI</p>
+                            <p>Key Focus: Image Management, Public Trust</p>
+                        </div>
+                        <button class="vote-button primary-button" data-candidate-id="4">
+                            Vote for Lenonardo AI
+                        </button>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Vote Confirmation Modal -->
+            <div class="modal" id="voteModal">
+                <div class="modal-content">
+                    <h2>Confirm Your Vote</h2>
+                    <p>You are about to vote for: <span id="selectedCandidate"></span></p>
+                    <p class="modal-note">This action cannot be undone.</p>
+                    <div class="modal-actions">
+                        <button class="secondary-button" id="cancelVote">Cancel</button>
+                        <button class="primary-button" id="confirmVote">Confirm Vote</button>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Success Message -->
+            <div class="success-message" id="successMessage">
+                <div class="success-content">
+                    <div class="success-icon">✓</div>
+                    <h2>Thank You for Voting!</h2>
+                    <p>Your vote has been recorded successfully.</p>
+                    <p>You will be redirected to the results page shortly.</p>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="footer-content">
+            <div class="footer-section">
+                <h4>NextGen Ballot</h4>
+                <p>Making democracy more accessible</p>
+            </div>
+            <div class="footer-section">
+                <h4>Quick Links</h4>
+                <ul>
+                    <li><a href="index.html#about">About</a></li>
+                    <li><a href="index.html#how-it-works">How it Works</a></li>
+                    <li><a href="#" class="help-link">Help</a></li>
+                </ul>
+            </div>
+            <div class="footer-section">
+                <h4>Contact</h4>
+                <p>support@nextgenballot.com</p>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2025 NextGen Ballot. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script src="scripts/script.js"></script>
+    <script>
+        document.querySelectorAll('.vote-button').forEach(button => {
+          button.addEventListener('click', () => {
+            window.location.href = 'thankyou.html';
+          });
+        });
+      </script>
+
+</body>
+</html> 
