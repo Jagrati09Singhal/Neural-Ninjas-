@@ -27,28 +27,31 @@ How To Setup Things:
 1. Install Dependencies:
    Using  (npm install)  command in your terminal
 
-2. Add Your Username and Password in the .env file for MongoDB connection:
+2. MongoDB connection in .env file:
 
-   MONGO_URI= mongodb+srv://<username>:<password>@cluster01.clagshx.mongodb.net/?retryWrites=true&w=majority&appName=Cluster01
+   MONGO_URI=mongodb+srv://<username>:<password>@cluster01.clagshx.mongodb.net/?retryWrites=true&w=majority&appName=Cluster01
    PORT=5000
    NODE_ENV=development
 
-3. Backend (Node Server):
+   Replace username and password with your MongoDB Atlas credentials.
+
+
+4. Backend (Node Server):
    Run   node server.js  on your terminal
 
-4. Dummy Data For Testing:
+5. Dummy Data For Testing:
 
    Aadhar: 485663215457,   phone: 4523658795,   voter id: YJK7896554 
    Aadhar: 987465632445,   phone: 4654653157,   Voter id: RWT1236548
    
    Note: OTP will be logged in your terminal, not sent via SMS in this mock version.
 
-5. Admin Login:
+6. Admin Login:
 
    Username: admin
    Password: admin123
 
-6. Screenshots:
+7. Screenshots:
 
    Home Page:
    ![image](https://github.com/user-attachments/assets/95e070e2-b3ee-4fc9-8ca3-0c824150f632)
@@ -65,7 +68,7 @@ How To Setup Things:
    ![image](https://github.com/user-attachments/assets/d377b6ff-70c6-49dd-aed5-e058cd4372d7)
 
    
-7. Project Demo:
+8. Project Demo:
 You can view the full working demo of the project here:
 
 Click Here:  https://drive.google.com/file/d/1KfmV1Kvvvw38NoxHbC6DEowiVMQJhzgs/view?usp=drive_link
